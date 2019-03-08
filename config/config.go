@@ -6,7 +6,7 @@ var (
 )
 
 func init() {
-	BaseUrl = "https://api.coinbase.com/v1/"
+	BaseUrl = "https://api.coinbase.com/v2/"
 	if Sandbox == true {
 		BaseUrl = "https://api.sandbox.coinbase.com/v1/"
 	}
