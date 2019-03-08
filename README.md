@@ -2,6 +2,8 @@
 
 # Coinbase Go Client Library
 
+Forked from *https://github.com/fabioberger/coinbase-go*
+
 An easy way to buy, send, and accept [bitcoin](http://en.wikipedia.org/wiki/Bitcoin) through the [Coinbase API](https://coinbase.com/docs/api/overview).
 
 This library supports both the [API key authentication method](https://coinbase.com/docs/api/overview) and OAuth. The below examples use an API key - for instructions on how to use OAuth, see [OAuth Authentication](#oauth-authentication).
@@ -19,14 +21,14 @@ export GOPATH="path/to/your/go/folder"
 Obtain the latest version of the Coinbase Go library with:
 
 ```bash
-go get github.com/fabioberger/coinbase-go
+go get github.com/mulepiemmason/coinbase-go
 ```
 
 Then, add the following to your Go project:
 
 ```go
 import (
-	"github.com/fabioberger/coinbase-go"
+	"github.com/mulepiemmason/coinbase-go"
 )
 ```
 
@@ -403,7 +405,7 @@ fmt.Println(strings.Join(contacts.Emails, ","))
 
 ## Adding new methods
 
-You can see a [list of method calls here](https://github.com/fabioberger/coinbase-go/blob/master/coinbase.go) and how they are implemented.  They are all wrappers around the [Coinbase JSON API](https://coinbase.com/api/doc).
+You can see a [list of method calls here](https://github.com/mulepiemmason/coinbase-go/blob/master/coinbase.go) and how they are implemented.  They are all wrappers around the [Coinbase JSON API](https://coinbase.com/api/doc).
 
 If there are any methods listed in the [API Reference](https://coinbase.com/api/doc) that don't have an explicit function name in the library, you can also call `Get`, `Post`, `Put`, or `Delete` with a `path`, `params` and holder struct for a quick implementation. Holder should be a pointer to some data structure that correctly reflects the structure of the returned JSON response. The library will attempt to unmarshal the response from the server into holder. For example:
 
@@ -524,4 +526,6 @@ If you would like to use the sandbox testnet instead of the live API endpoint, e
 Sandbox = true
 ```
 
+# Thanks to fabioberger for initial creation 
 
+https://github.com/fabioberger/coinbase-go
